@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { AnotherExample, Example } from "../types/example";
 import TestChild from "./TestChild";
+import { Container, Typography } from "@mui/material";
 
 const anothers: AnotherExample[] = [
   { side: 22, brand: "klf" },
@@ -17,11 +18,10 @@ export default function Test() {
   };
 
   return (
-    <>
-      <div>Test</div>
-      <div>Test Child</div>
-      <TestChild example={examples} stateFunction={stateMachine} />
+    <Container maxWidth="lg">
+      <Typography variant="h5">This is Parent Component</Typography>
       {boolState ? <div>This is true</div> : <div>This is false</div>}
-    </>
+      <TestChild example={examples} stateFunction={stateMachine} />
+    </Container>
   );
 }
