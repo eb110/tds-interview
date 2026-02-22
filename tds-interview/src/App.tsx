@@ -1,11 +1,13 @@
-import Test from "./components/Test";
+import { Box, Container } from "@mui/material";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <div>TDS Task</div>
-      <Test />
-    </>
+    <Box>
+      <Container maxWidth="xl" sx={{ mt: 6 }}>
+        <Outlet />
+      </Container>
+    </Box>
   );
 }
 
