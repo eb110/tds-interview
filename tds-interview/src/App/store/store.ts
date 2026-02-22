@@ -1,11 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { counterSlice } from "../../features/Contact/counterReducer";
 import { useDispatch, useSelector } from "react-redux";
+import { currencyBeaconApi } from "../../api/currencyBeaconApi";
+import { uiSlice } from "../../api/uiSlice";
 
 export const store = configureStore({
     reducer: {
-        counter: counterSlice.reducer
-    }
+        [currencyBeaconApi.reducerPath]: currencyBeaconApi.reducer,
+        counter: counterSlice.reducer,
+        ui: uiSlice.reducer,
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(currencyBeaconApi.middleware)
 });
 
 

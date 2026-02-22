@@ -8,6 +8,14 @@ export default function HomePage() {
         sx={{ m: 2, width: "25%" }}
         variant="contained"
         component={Link}
+        to="/converter"
+      >
+        Currency converter
+      </Button>
+      <Button
+        sx={{ m: 2, width: "25%" }}
+        variant="contained"
+        component={Link}
         to="/test"
       >
         Test Page

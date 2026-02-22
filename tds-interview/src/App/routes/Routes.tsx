@@ -3,6 +3,7 @@ import App from "../../App";
 import TestPage from "../../features/Test/TestPage";
 import ContactPage from "../../features/Contact/ContactPage";
 import HomePage from "../../features/Home/HomePage";
+import Converter from "../../features/CurrencyConverter/Converter";
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +13,7 @@ export const router = createBrowserRouter([
       { path: "", element: <HomePage /> },
       { path: "/test", element: <TestPage /> },
       { path: "/contact", element: <ContactPage /> },
+      { path: "/converter", element: <Converter /> },
     ],
   },
 ]);
